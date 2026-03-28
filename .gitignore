@@ -31,5 +31,4 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# 发布用临时目录（APK 上传到 GitHub Releases，不提交二进制）
-dist/*.apk
+# dist/ 中可放置待上传至 GitHub Releases 的 APK 副本；*.apk 已全局忽略，不进入 Git
