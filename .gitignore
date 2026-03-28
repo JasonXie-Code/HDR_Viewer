@@ -1,0 +1,35 @@
+# 亮度监控会话日志（由 misc/brightness_monitor.py 生成）
+misc/logs/*
+!misc/logs/.gitkeep
+
+# 便携工具链体积过大，不纳入远程仓库；克隆后按 PROJECT.md 从本机或 misc 脚本准备
+misc/tools/
+misc/local-repo/
+
+# Gradle / Android 构建产物与缓存
+.gradle/
+**/build/
+.kotlin/
+android/.kotlin/
+*.apk
+*.aab
+*.dm
+
+# 本地应用日志
+.AppLogs/
+
+# 根目录本地照片素材（教程配图请复制到 docs/images/）
+Photos/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE / 系统
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+
+# 发布用临时目录（APK 上传到 GitHub Releases，不提交二进制）
+dist/*.apk

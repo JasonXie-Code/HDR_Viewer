@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 与 launcher 前景图深蓝底对齐（misc/logo_concepts/logo/new_logo_concept_sun_frame.png） -->
+    <color name="ic_launcher_background">#1D2534</color>
+</resources>

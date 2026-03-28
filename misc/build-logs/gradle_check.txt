@@ -1,0 +1,47 @@
+﻿Initialized native services in: C:\Users\92844\.gradle\native
+Initialized jansi services in: C:\Users\92844\.gradle\native
+Received JVM installation metadata from 'G:\HDR_Viewer\misc\tools\jdk-17': {JAVA_HOME=G:\HDR_Viewer\misc\tools\jdk-17, JAVA_VERSION=17.0.12, JAVA_VENDOR=Oracle Corporation, RUNTIME_NAME=Java(TM) SE Runtime Environment, RUNTIME_VERSION=17.0.12+8-LTS-286, VM_NAME=Java HotSpot(TM) 64-Bit Server VM, VM_VERSION=17.0.12+8-LTS-286, VM_VENDOR=Oracle Corporation, OS_ARCH=amd64}
+The client will now receive all logging from the daemon (pid: 61844). The daemon log file: C:\Users\92844\.gradle\daemon\8.4\daemon-61844.out.log
+Starting 4th build in daemon [uptime: 9 mins 59.858 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 2 GiB]
+Using 32 worker leases.
+Now considering [G:\HDR_Viewer\android] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'G:\HDR_Viewer\android\settings.gradle.kts'.
+Projects loaded. Root project using build file 'G:\HDR_Viewer\android\build.gradle.kts'.
+Included projects: [root project 'HDRViewer', project ':app']
+
+> Configure project :
+Evaluating root project 'HDRViewer' using build file 'G:\HDR_Viewer\android\build.gradle.kts'.
+
+> Configure project :app
+Evaluating project ':app' using build file 'G:\HDR_Viewer\android\app\build.gradle.kts'.
+WARNING: The option setting 'android.overridePathCheck=true' is experimental.
+The current default is 'false'.
+Using default execution profile
+Using Kotlin Gradle Plugin gradle82 variant
+Caching disabled for Kotlin DSL accessors for project ':app' because:
+  Build cache is disabled
+Skipping Kotlin DSL accessors for project ':app' as it is up-to-date.
+All projects evaluated.
+Task path ':app:checkDebugAarMetadata' matched project ':app'
+Task name matched 'checkDebugAarMetadata'
+Selected primary task 'checkDebugAarMetadata' from project :app
+Tasks to be executed: [task ':app:preBuild', task ':app:preDebugBuild', task ':app:checkDebugAarMetadata']
+Tasks that were excluded: []
+Resolve mutations for :app:preBuild (Thread[Execution worker,5,main]) started.
+:app:preBuild (Thread[Execution worker,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[Execution worker,5,main]) started.
+:app:preDebugBuild (Thread[Execution worker Thread 21,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[Execution worker Thread 21,5,main]) started.
+:app:checkDebugAarMetadata (Thread[Execution worker Thread 21,5,main]) started.
+
+> Task :app:checkDebugAarMetadata
+> Task :app:checkDebugAarMetadata FAILED
