@@ -6,7 +6,6 @@
 |------|------|
 | `logo_concept_sun_frame.png` | 应用概念 Logo（与 `misc/logo_concepts/` 源稿一致） |
 | `sample_gallery_photo.jpg` | 从 **`Photos/`** 复制的示例照片，用于 README 说明「相册内容」语境 |
-| `readme_github_render.png` | 文档在 GitHub 上的渲染效果示意（便于读者对照） |
 | `github_quick_setup_empty_repo.png` | 见 **`docs/GITHUB_PUBLISH_GUIDE.md`** |
 
 若您更新 **`Photos/`** 中的样张，可将新图复制到本目录并同步修改 **`README.md`** 中的引用路径。

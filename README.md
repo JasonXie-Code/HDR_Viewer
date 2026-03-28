@@ -100,7 +100,6 @@ flowchart TB
 |:----:|------|
 | <img src="docs/images/logo_concept_sun_frame.png" alt="Logo" width="96"/> | **概念 Logo**：与 `misc/logo_concepts/` 设计一致，用于品牌识别。 |
 | <img src="docs/images/sample_gallery_photo.jpg" alt="样张" width="200"/> | **相册内容示例**：示意本应用处理的典型静态影像场景（非功能截图）。 |
-| <img src="docs/images/readme_github_render.png" alt="GitHub 文档渲染" width="480"/> | **文档在 GitHub 上的渲染**：帮助新贡献者对照本地 Markdown 与网页效果。 |
 
 ### 延伸阅读
 
@@ -179,7 +178,6 @@ More detail: [PROJECT.md](PROJECT.md) (brightness / Gainmap sections).
 |:-------:|-------------|
 | <img src="docs/images/logo_concept_sun_frame.png" alt="Logo" width="96"/> | Concept logo (see `misc/logo_concepts/`). |
 | <img src="docs/images/sample_gallery_photo.jpg" alt="Sample photo" width="200"/> | Sample still copied from **`Photos/`** for documentation context. |
-| <img src="docs/images/readme_github_render.png" alt="GitHub render" width="480"/> | How this README may look when rendered on GitHub. |
 
 ### Further reading
 
