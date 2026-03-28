@@ -18,8 +18,8 @@
 
 | 语言 | 快速跳转 |
 |------|----------|
-| **中文** | [项目定位](#项目定位) · [为何限定 Android 15](#为何限定-android-15) · [仓库结构](#仓库结构) · [构建步骤](#构建步骤) · [亮度策略（示意）](#亮度与预览策略示意) · [配图说明](#配图说明) · [延伸阅读](#延伸阅读) |
-| **English** | [What this app does](#what-this-app-does) · [Why Android 15](#why-android-15) · [Repository layout](#repository-layout) · [Build](#build) · [Brightness pipeline](#brightness--preview-pipeline) · [Figures](#figures) · [Further reading](#further-reading) |
+| **中文** | [项目定位](#项目定位) · [为何限定 Android 15](#为何限定-android-15) · [仓库结构](#仓库结构) · [构建步骤](#构建步骤) · [亮度策略（示意）](#亮度与预览策略示意) · [配图说明](#配图说明) · [应用界面截图](#应用界面截图) · [延伸阅读](#延伸阅读) |
+| **English** | [What this app does](#what-this-app-does) · [Why Android 15](#why-android-15) · [Repository layout](#repository-layout) · [Build](#build) · [Brightness pipeline](#brightness--preview-pipeline) · [Figures](#figures) · [UI screenshots](#ui-screenshots) · [Further reading](#further-reading) |
 
 ---
 
@@ -94,12 +94,45 @@ flowchart TB
 
 ### 配图说明
 
-以下图片来自 **`docs/images/`**（其中样张由仓库旁 **`Photos/`** 复制而来，便于在 GitHub 上展示；根目录 **`Photos/`** 仍可能被 `.gitignore` 忽略，请勿依赖其直接出现在远程仓库）。
+以下图片来自 **`docs/images/`**。根目录 **`Photos/`** 中的原始截图已**逐一复制**为下表中的 `screen_*.jpg` 文件名并纳入文档，便于在 GitHub 上展示（**`Photos/`** 本身仍可能被 `.gitignore` 忽略）。
 
 | 预览 | 说明 |
 |:----:|------|
 | <img src="docs/images/logo_concept_sun_frame.png" alt="Logo" width="96"/> | **概念 Logo**：与 `misc/logo_concepts/` 设计一致，用于品牌识别。 |
-| <img src="docs/images/sample_gallery_photo.jpg" alt="样张" width="200"/> | **相册内容示例**：示意本应用处理的典型静态影像场景（非功能截图）。 |
+
+### 应用界面截图
+
+以下五张图对应 **`Photos/` 目录内全部素材**（文件名见 [`docs/images/README.md`](docs/images/README.md)），按**主界面 → 相册 → 设置 → 全屏预览**的阅读顺序排列，便于对照 [PROJECT.md — Android 应用工程](PROJECT.md#android-应用工程当前实现)。
+
+#### 1）照片 · 时间线与筛选（`screen_photos_timeline.jpg`）
+
+| 预览 | 说明 |
+|:----:|------|
+| <img src="docs/images/screen_photos_timeline.jpg" alt="照片时间线" width="280"/> | **对应页面**：底部导航选中 **「照片」**。可见 **顶栏**（搜索、排序、从系统选取媒体、更多）、其下 **类型筛选**（**全部 / 仅照片 / 仅视频 / 仅动图** 等 FilterChip），以及 **按修改日分组标题**（如「2026年3月28日」）与 **圆角缩略图网格**。这与工程中「主界面即相册、时间线 + 筛选」的产品定位一致。若您手中的截图为**纵向长图**，下半截可能来自系统或其他应用拼接，**以本仓库当前 `GalleryScreen` 实现为准**。 |
+
+#### 2）相册 · 文件夹网格（`screen_albums_tab.jpg`）
+
+| 预览 | 说明 |
+|:----:|------|
+| <img src="docs/images/screen_albums_tab.jpg" alt="相册 Tab" width="280"/> | **对应页面**：底部导航选中 **「相册」**。**深色主题**下以 **双列网格** 展示相册卡片：每卡含 **封面缩略图**、标题与 **「N 项」** 数量。部分标题显示为 **`0`** 或数值型 ID，多见于 **MediaStore 未提供友好相册名** 时的回退展示，属常见边界情况。 |
+
+#### 3）设置 · 显示与亮度 / Gainmap 说明（`screen_settings_tab.jpg`）
+
+| 预览 | 说明 |
+|:----:|------|
+| <img src="docs/images/screen_settings_tab.jpg" alt="设置" width="280"/> | **对应页面**：底部导航选中 **「设置」**。可见 **「显示与亮度」** 分组：文案说明全屏预览与列表页的显示策略；**默认预览亮度** 滑块（如 **200%**）、**高亮段饱和度增强** 与 **预览时保持屏幕常亮** 开关；下方 **「预览说明」** 解释 **0～200% 经 Gainmap 调节、不直接等同拖动系统亮度条** 等产品逻辑，与 `PROJECT.md` 中 Gainmap 段落一致。 |
+
+#### 4）全屏预览 · 单图与亮度入口（`screen_single_image_viewer.jpg`）
+
+| 预览 | 说明 |
+|:----:|------|
+| <img src="docs/images/screen_single_image_viewer.jpg" alt="单图预览" width="280"/> | **对应页面**：**单媒体全屏查看**。顶栏为 **返回、文件名、分享、信息、删除**；内容为一张**插画类图片**（画面右下角可见 **「豆包AI生成」** 水印，属**被浏览的媒体本身**，非应用内置水印）。右下浮动按钮为 **亮度 / 高亮** 相关入口，对应全屏 **可读亮度** 能力。 |
+
+#### 5）全屏预览 · 缩放与内容（`screen_preview_zoom.jpg`）
+
+| 预览 | 说明 |
+|:----:|------|
+| <img src="docs/images/screen_preview_zoom.jpg" alt="预览缩放" width="280"/> | **对应页面**：全屏查看时 **缩放** 状态（画面底部可见 **200%** 等缩放指示）。内容为网络梗图（**My Little Pony** 角色梗），用于演示 **双指缩放 / 高倍查看** 下的阅读体验；**全屏预览亮度与 Gainmap 策略** 仍仅作用于当前媒体区域，与 `ViewerScreen` 行为一致。 |
 
 ### 延伸阅读
 
@@ -177,7 +210,40 @@ More detail: [PROJECT.md](PROJECT.md) (brightness / Gainmap sections).
 | Preview | Description |
 |:-------:|-------------|
 | <img src="docs/images/logo_concept_sun_frame.png" alt="Logo" width="96"/> | Concept logo (see `misc/logo_concepts/`). |
-| <img src="docs/images/sample_gallery_photo.jpg" alt="Sample photo" width="200"/> | Sample still copied from **`Photos/`** for documentation context. |
+
+### UI screenshots
+
+All five **`screen_*.jpg`** files in **`docs/images/`** are copies of every image under repo-root **`Photos/`** (see [`docs/images/README.md`](docs/images/README.md)). Order: **timeline → albums → settings → fullscreen**.
+
+#### 1) Photos · timeline & filters (`screen_photos_timeline.jpg`)
+
+| Preview | Description |
+|:-------:|-------------|
+| <img src="docs/images/screen_photos_timeline.jpg" alt="Photos timeline" width="280"/> | **Screen**: **Photos** tab selected. **Top bar** (search, sort, pick from system, overflow), **type chips** (**All / Photos only / Videos only / GIFs only**), **date section headers**, and a **rounded thumbnail grid**—matching the “home is the gallery” design. If your file is an **extra-tall composite**, treat only the **HDR Viewer** portion as authoritative; see `GalleryScreen` in source. |
+
+#### 2) Albums · folder grid (`screen_albums_tab.jpg`)
+
+| Preview | Description |
+|:-------:|-------------|
+| <img src="docs/images/screen_albums_tab.jpg" alt="Albums tab" width="280"/> | **Screen**: **Albums** tab, **dark theme**, **two-column** cards with **cover**, **title**, and **item count** (`N 项`). Titles like **`0`** or numeric IDs often appear when **MediaStore** has no friendly album name—normal edge case. |
+
+#### 3) Settings · display & Gainmap (`screen_settings_tab.jpg`)
+
+| Preview | Description |
+|:-------:|-------------|
+| <img src="docs/images/screen_settings_tab.jpg" alt="Settings" width="280"/> | **Screen**: **Settings** tab. **Display & brightness** copy; **default preview brightness** slider (e.g. **200%**); **highlight saturation boost** and **keep screen on** toggles; **Preview explanation** text describing **0–200% via Gainmap** (aligned with `PROJECT.md`). |
+
+#### 4) Viewer · single image + brightness FAB (`screen_single_image_viewer.jpg`)
+
+| Preview | Description |
+|:-------:|-------------|
+| <img src="docs/images/screen_single_image_viewer.jpg" alt="Single image viewer" width="280"/> | **Screen**: **Fullscreen** single asset. **Top bar**: back, filename, share, info, delete. Image content includes a **Doubao AI** watermark on the **asset itself**, not added by the app. **Floating brightness** control bottom-right maps to fullscreen readability features. |
+
+#### 5) Viewer · zoom (`screen_preview_zoom.jpg`)
+
+| Preview | Description |
+|:-------:|-------------|
+| <img src="docs/images/screen_preview_zoom.jpg" alt="Zoomed preview" width="280"/> | **Screen**: Zoomed preview (**~200%** indicator). Sample content is a **meme** image (illustrative only). Demonstrates **pinch-zoom** reading; brightness/Gainmap behavior follows `ViewerScreen` / project docs. |
 
 ### Further reading
 
