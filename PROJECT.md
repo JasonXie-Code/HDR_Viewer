@@ -2,7 +2,7 @@
 
 ## 仓库目录约定
 
-**根目录**仅放置 **`ROADMAP.md`**、**`PROJECT.md`**（立项与路线图）。可移植工具链在 **`misc/`**，Android 应用与 Gradle 工程在 **`android/`**（含 `app` 模块、`gradlew*`、`settings.gradle.kts` 等）。**Gradle 构建输出摘录**等临时文本请放在 **`misc/build-logs/`**，勿放在仓库根目录。
+**根目录**放置 **`README.md`**（仓库对外简介）、**`ROADMAP.md`**、**`PROJECT.md`**（立项与路线图）。可移植工具链在 **`misc/`**，Android 应用与 Gradle 工程在 **`android/`**（含 `app` 模块、`gradlew*`、`settings.gradle.kts` 等）。**Gradle 构建输出摘录**等临时文本请放在 **`misc/build-logs/`**，勿放在仓库根目录。
 
 ## 目标
 
