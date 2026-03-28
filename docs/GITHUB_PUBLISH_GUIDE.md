@@ -58,6 +58,15 @@ git push -u origin main
 
 **说明**：推送需网络与权限；若提示认证失败，请检查 SSH agent 或改用 HTTPS 远程 URL。
 
+**若出现 `Host key verification failed`**：本机尚未信任 `github.com` 的 SSH 主机密钥。可在首次连接前执行（PowerShell 示例）：
+
+```powershell
+mkdir $env:USERPROFILE\.ssh -Force
+ssh-keyscan github.com >> $env:USERPROFILE\.ssh\known_hosts
+```
+
+或改用 HTTPS 远程地址：`https://github.com/JasonXie-Code/HDR_Viewer.git`，推送时使用 **Personal Access Token** 或 **Git Credential Manager** 完成认证。
+
 ### 4. 构建 Release 用 APK（本地）
 
 在配置好 **JDK 17** 与 **Android SDK** 的前提下（本机便携环境可执行 `misc\env_portable.cmd` 或 `misc\env_portable.ps1`），于 `android/` 目录：
@@ -150,6 +159,8 @@ git push -u origin main
 ```
 
 If `origin` already exists, use `git remote set-url origin <url>` then `git push -u origin main`.
+
+**Troubleshooting — `Host key verification failed`**: add GitHub’s host key to `~/.ssh/known_hosts` (e.g. `ssh-keyscan github.com >> ~/.ssh/known_hosts` on Unix-like shells), or switch the remote to **HTTPS** (`https://github.com/JasonXie-Code/HDR_Viewer.git`) and authenticate with a **PAT** or **Git Credential Manager**.
 
 ### 4. Build a release APK
 
