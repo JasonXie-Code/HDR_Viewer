@@ -138,8 +138,6 @@ flowchart TB
 
 - **[PROJECT.md](PROJECT.md)**：产品边界、nit 话术、合规与开放问题。  
 - **[ROADMAP.md](ROADMAP.md)**：里程碑与阶段任务。  
-- **[docs/GITHUB_PUBLISH_GUIDE.md](docs/GITHUB_PUBLISH_GUIDE.md)**：推送仓库与 **Releases** 附带 APK（中英双语，含流程图）。
-
 ---
 
 ## English
@@ -248,8 +246,6 @@ All five **`screen_*.jpg`** files in **`docs/images/`** are copies of every imag
 
 - **[PROJECT.md](PROJECT.md)** — product definition and technical constraints.  
 - **[ROADMAP.md](ROADMAP.md)** — roadmap and milestones.  
-- **[docs/GITHUB_PUBLISH_GUIDE.md](docs/GITHUB_PUBLISH_GUIDE.md)** — push workflow and attaching APKs to Releases.
-
 ---
 
 <div align="center">

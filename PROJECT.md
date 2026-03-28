@@ -167,7 +167,6 @@
 ## 文档与仓库约定
 
 - **ROADMAP.md**：阶段目标、可交付物、风险与开放问题。
-- **GitHub 推送与 Releases 附带 APK**：见 **`docs/GITHUB_PUBLISH_GUIDE.md`**（中英双语、含流程图与配图说明）；源码用 `git push`，APK 建议仅作为 **Release 附件** 上传，不纳入 Git 跟踪（见根目录 `.gitignore`）。
 - 架构、显示链路或亮度策略有重大变更时，同步更新本文件与 ROADMAP。
 
 ## 开放问题（需实机验证）

@@ -10,6 +10,5 @@
 | `screen_settings_tab.jpg` | 自 **`Photos/d313d01f…jpg`**：「设置」页（显示与亮度 / Gainmap 说明） |
 | `screen_single_image_viewer.jpg` | 自 **`Photos/85ee81cd…jpg`**：单图全屏预览 |
 | `screen_preview_zoom.jpg` | 自 **`Photos/9426f6f28…_720.jpg`**：全屏预览 + 缩放指示 |
-| `github_quick_setup_empty_repo.png` | 见 **`docs/GITHUB_PUBLISH_GUIDE.md`** |
 
 若您更新 **`Photos/`** 中的截图，请覆盖对应 `screen_*.jpg` 并检查 **`README.md`** 中的文字是否仍与画面对齐。
